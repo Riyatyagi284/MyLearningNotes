@@ -1,0 +1,33 @@
+Evaluating whether a Web API is good or bad 
+
+a) Always think about -> PERFORMANCE, SCALABILITY, EXTENSABILITY, ERROR HANDLING AND MONITORING, DOCUMENTATION, USABILITY, FEEDBACK
+
+NOW , how to achieve all these --
+(i) PERFORMANCE : Optimize Database Queries, Implement Caching, Pagination and Filtering, Use Asynchronous Processing
+
+--> Try to reduce number of DB calls
+--> Instead to fetch data manually with db call use POPULATE().
+--> use limit(), 
+--> prevent to send any un-necessary data in response(IMPROVE PERFORMACE)
+
+--> Use INDEXING 
+       --> Create indexes on frequently queried fields to speed up search operations.
+       --> Use compound indexes for multiple search criteria.
+       --> Avoid full table scans , INSTEAD 
+                                        --> use SELECTIVE QUERIES with filters and conditions.
+                                        --> Use efficient join techniques
+      --> Normalize data to reduce redundancy and improve data integrity.
+      --> Consider denormalization in specific cases for performance optimization.   
+      --> Choose appropriate data types for fields to optimize storage and performance.
+      --> Design relationships between FOREIGN KEYS and REFRENTIAL INTEGRITY CONSTRAINTS.
+
+Application-Level Optimization
+      -->  Batching:
+              --> Group multiple database operations into a single transaction to reduce round trips.
+              --> Use bulk insert or update operations when applicable.
+      --> Lazy Loading:
+              --> Defer loading data until it's actually needed to improve initial application performance.
+      --> Connection Pooling:
+              --> Reuse database connections to avoid the overhead of creating new ones.
+              --> Prepared Statements:
+              --> Precompile SQL statements to improve performance and security.
