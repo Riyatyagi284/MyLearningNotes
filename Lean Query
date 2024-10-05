@@ -1,0 +1,36 @@
+ Lean Query
+
+a) What is a Lean Query?
+A lean query in Mongoose is a way of optimizing your query by skipping the additional Mongoose features and returning a simple JavaScript object instead of a full Mongoose document. Normally, Mongoose queries return documents with extra functionality, like helper methods (e.g., .save(), .populate(), etc.).
+
+By using the .lean() method, you tell Mongoose to skip the additional processing and return plain objects. This can lead to faster query performance.
+
+b) Why use Lean Queries?
+Performance: Lean queries are faster because they don’t attach Mongoose methods to the returned data. If you’re only reading data (and not modifying it), there’s no need to pay the performance cost of these extra methods.
+
+Memory Efficiency: Lean queries take up less memory because they return plain JavaScript objects instead of heavier Mongoose documents. This is especially important when querying large datasets.
+
+Avoiding Overhead: When you're not intending to update or use Mongoose’s built-in functions like .save() or virtuals, lean queries reduce the overhead of features you won’t use.
+
+c) Where to Use Lean Queries?
+
+ANS: --> In read-heavy operations where you're just fetching data and don’t need to update the results.
+     --> Advantage: fast response for displaying data.
+                    --> This returns plain JavaScript objects instead of Mongoose documents.
+
+     --> Disadvantage: we won’t be able to modifying the fetched data directly.
+
+EXAMPLE: In e-Commerce project --> for fetching products for listings --> use lean query (because you are only reading data to display to the user).
+
+d) How to Use Lean Queries?
+ANS: --> Using a lean query in Mongoose is simple. You append .lean() to your query, like this:
+
+EXAMPLE USAGE:
+[[const products = await Product.find({}).lean();]]
+
+e) Who Should Use Lean Queries?
+ANS: --> high-performance applications, where read speed is crucial (e.g., eCommerce product listings).
+   
+f) Lean Query Example 
+
+ANS: const product = await Product.findById(productId).lean();
