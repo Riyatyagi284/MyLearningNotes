@@ -1,0 +1,31 @@
+1. forEach and Asynchronous Behavior :--
+
+    Typical Usage: for iterating over an array to perform an action for each item.
+    Disadvantage:  --> It doesn't handle promises(it doesn't return anything and doesn't await promises implicitly.)
+                   --> Even if you use async/await inside forEach, the loop won't wait for the promises to resolve.
+
+   Example:  
+  const items = [/* some items */];
+   
+items.forEach(async (item) => {
+  const result = await someAsyncFunction(item);
+  console.log(result);
+});
+
+console.log("This will run before all promises resolve!");
+
+2. map with Asynchronous Behavior:--
+
+const items = [/* some items */];
+
+const promises = items.map(async (item) => {
+  const result = await someAsyncFunction(item);
+  return result;
+});
+
+// Use Promise.all to wait for all async operations to complete
+const results = await Promise.all(promises);
+
+console.log("This will run after all promises resolve!", results); 
+ Map returns an array of promises (promises), and Promise.all ensures that we wait for all promises to resolve before moving on to the next step.
+                   
