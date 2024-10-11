@@ -1,0 +1,19 @@
+what are Robust APIS?
+
+# [strong, flexible software]##
+Ans:  -->  a flexible and strong API that allows applications to communicate with each other seamlessly.
+
+## CHARACTERSTICS OF A ROBUST APIS: 
+   --> Resilient: A robust API is able to adapt to changes in technology. 
+   --> Reliable: A robust API is able to perform its functions consistently. 
+   -->  Easy to use: A robust API is easy to use and control. 
+   --> Uniform interface: A robust API uses the same format for requests and responses, and the same protocol. 
+   --> Optimized for performance: A robust API is optimized for performance to deliver a good user experience. 
+
+## TIPS FOR BUILDING A ROBUST APIS: 
+   --> Define objectives 
+   --> Consider security mechanisms like authentication and authorization 
+   --> Use caching to reduce server load and improve response times 
+   --> Use pagination for large datasets 
+   --> Use compression techniques like GZIP to reduce data transfer size 
+   --> Follow Postel's law: be conservative in what you send, and be liberal in what you accept 
