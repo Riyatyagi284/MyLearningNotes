@@ -1,0 +1,12 @@
+Ques: I applied all the detailed validation in my schema,  is it necessary to handle those validation while creating API as well?
+
+ANSWER --> Yes, it is absolutely necessary to handle validation both in your schema and within your API endpoints.
+
+       --> Because 
+              --> SCHEMA_PROVIDES: strong foundation for data validation
+        AND   --> a) allows you to implement more dynamic or complex validation rules, that might not be suitable for schema.
+                  b) I can provide more informative error messages to the client.
+                  c) API-level validation helps prevent malicious input from reaching your database.
+                  -->  This can protect your data from unauthorized modifications or attacks.
+
+We can use EXPRESS_VALIDATOR for validating apis incoming requests.
