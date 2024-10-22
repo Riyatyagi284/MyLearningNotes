@@ -1,0 +1,21 @@
+QUES: How Amazon creates relationships between products, and other related products?
+ANSWER: Amazon uses MACHINE LEARNING concept to determine Automatically the "relatedProducts and relatedTags" data "basedOn customerBehaviour".
+
+some key factors includes are:--
+    (1) customerBehaviour (2) SearchPattern (3) BrowsingHistory and Recommendations
+    (4) productCategory (5) productAttributes (6) FrequentlyBoughtTogether
+    (7) CustomersWhoBoughtThisAlsoBought
+
+example: (1) let say any user search any product by using some tag, then Amazon will show all those similar product having same tag and also that product is sold in large quantity.
+         so basically here related products will be : all those products with this tag and user intereaction found in huge amount.
+
+         (2) Amazon uses data from what customers view and click ==> 
+
+         (3) ALl those products whose category and subCategory matches and also their user interection is good enough ==> those product shown in related or recommended products section.
+
+         (4) Amazon suggest relatedProducts based on attributes like size, color, brand, specifications, and keywords.
+               --> If a customer is browsing "wireless earbuds," Amazon will suggest similar products based on attributes like "Bluetooth version," "battery life," "brand," etc.
+         
+          (5) Amazon tries to analyzes the preferences of users who have similarbehavior have purchased or viewed.
+               --> Customers who bought this also bought
+               --> Frequently Bought Together
