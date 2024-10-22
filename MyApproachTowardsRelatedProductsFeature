@@ -1,0 +1,17 @@
+StepByStep Approach Towards RelatedProducts Feature :--
+
+1) show relatedProducts using "CategoryAndTags" 
+     -> First defne schema for that -> and associate each product with one or more categories or tags.
+     -> Fetch Related Products Based on Category/Tag.
+
+2) show relatedProducts based on attributes (size, color, specifications, brand)
+      -> Fetch Related Products Based on Attributes.
+
+3) show relatedProducts based on Automated Recommendations
+      -> Implement tracking on your website to gather data on which products users are viewing, clicking, adding to their cart, and purchasing.
+              --> But for that first create userBehaviour schema to store the user intereaction relatedData.
+
+      -> Use collaborative filtering to suggest products that are often bought or viewed together. This algorithm recommends products to a user based on what similar users have interacted with.
+              --> Libraries like surprise in Python or TensorFlow Recommenders can help you build these models
+
+      -> combine (user behavior-based) with content-based filtering (attribute-based) to offer a more comprehensive recommendation system.
