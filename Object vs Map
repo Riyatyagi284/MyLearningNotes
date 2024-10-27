@@ -1,0 +1,8 @@
+Feature	                         Map                                              	              Object
+Key types	                       Any type (objects, functions, etc.)	                            Strings or symbols only
+Iteration order	                 Guaranteed insertion order	                                      No guaranteed order
+Performance(insertion/deletion)	 Faster for large datasets	                                      Slightly faster for small datasets
+
+Size retrieval	                 size property 	                                                  Object.keys(obj).length 
+size retrieval TC                (O(1))                                                           (O(n))
+DSA examples	                   Two-sum, Subarray Sum, Graphs, Memoization	                      Character counts, simple lookups
