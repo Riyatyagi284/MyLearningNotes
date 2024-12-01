@@ -1,0 +1,7 @@
+Ques: When Primitives Behave Like Objects ??
+Ques: Everything in JS is "primitive or object" ??
+
+#### JavaScript creates temporary wrapper objects (via autoboxing) for primitive values in specific conditions when you:
+
+ ## Access a property of a primitive value.
+ ## Call a method on a primitive value.
